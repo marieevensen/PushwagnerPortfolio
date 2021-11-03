@@ -1,0 +1,285 @@
+body {
+    background-color: #FCFE92;
+    font-size: 30px;
+    font-family: 'Red Rose', cursive;
+    color: #FF5AB3;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media  screen and (min-width: 768px) {
+    .header {
+        justify-content: space-between;
+    }
+}
+
+.header .header__btn {
+    background-color: #FCFE92;
+    border: 2px solid #FF5AB3;
+    border-radius: 30px;
+    margin: 20px;
+    font-size: 0.6em;
+    padding: 3px 10px;
+    color: #FF5AB3;
+    cursor: pointer;
+    font-family: 'Red Rose', cursive;
+}
+
+@media  screen and (min-width: 768px) {
+    .header .header__btn {
+        margin: 35px;
+        font-size: 1em;
+        padding: 7px 20px;
+    }
+}
+
+.header p {
+    margin: 17px 20px;
+    font-size: 0.8em;
+    font-family: 'Reenie Beanie', cursive;
+    color: black;
+}
+
+@media  screen and (min-width: 768px) {
+    .header p {
+        margin: 35px;
+        font-size: 1em;
+    }
+}
+
+.home {
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .home {
+        margin: 0 auto;
+        max-width: 940px;
+        width: 100%;
+    }
+}
+
+.title {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+@media  screen and (min-width: 768px) {
+    .title {
+        height: 80vh;
+    }
+}
+
+.title img {
+    height: 23vh;
+    width: auto;
+    margin: 50px 20px;
+}
+
+@media  screen and (min-width: 768px) {
+    .title img {
+        height: 65vh;
+        width: auto;
+        margin-top: 0;
+    }
+}
+
+.title .title__text {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    animation-name: transformIt;
+    animation-duration: 3s;
+}
+
+@media  screen and (min-width: 768px) {
+    .title .title__text {
+        top: 20%;
+        left: 8%;
+    }
+}
+
+@keyframes transformIt {
+    from {
+        transform: translate(1100px);
+    }
+    to {
+        transform: translate(0px);
+    }
+}
+
+.title .title__text-one {
+    font-size: 1.4em;
+}
+
+@media  screen and (min-width: 768px) {
+    .title .title__text-one {
+        font-size: 3.2em;
+    }
+}
+
+.title .title__text-two {
+    font-size: 0.7em;
+    line-height: 0;
+}
+
+.about {
+    text-align: center;
+}
+
+@media  screen and (min-width: 768px) {
+    .about {
+        text-align: left;
+        height: 80vh;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        margin: 0px 80px;
+    }
+}
+
+
+@media  screen and (min-width: 768px) {
+    .about .about__margin {
+        margin-left: 20px;
+    }
+}
+
+@media  screen and (min-width: 768px) {
+    .about .about__title {
+        margin-top: 0.2em;
+    }
+}
+
+.about .about__description {
+    font-size: 0.7em;
+    margin-bottom: 1em;
+}
+
+@media  screen and (min-width: 768px) {
+    .about .about__description {
+        font-size: 0.7em;
+        margin-top: 0.7em;
+        margin-bottom: 0;
+    }
+}
+
+.about .about__image {
+    height: 30vh;
+    width: auto;
+    box-shadow: 0px 1px 10px 1px rgb(99, 99, 99);
+}
+
+@media  screen and (min-width: 768px) {
+    .about .about__image {
+        height: 55vh;
+    }
+}
+
+.facts {
+    font-size: 0.8em;
+    color: #7DED61;
+    text-align: right;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+@media  screen and (min-width: 768px) {
+    .facts {
+        font-size: 2em;
+        height: 80vh;
+        width: fit-content;
+        margin: 80px;
+        padding: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .pictures {
+        margin: 0px 100px;
+    }    
+}
+
+.pictures .picture {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    flex-flow: row wrap;
+}
+
+@media  screen and (min-width: 768px) {
+    .pictures .picture {
+        display: flex;
+        justify-content: space-between;
+        text-align: none;
+        flex-flow: row nowrap;
+        margin-top: 0;
+    }
+}
+
+.pictures .picture__title {
+    font-size: 1em;
+}
+
+@media  screen and (min-width: 768px) {
+    .pictures .picture__title {
+        font-size: 2em;
+    }
+}
+
+.pictures .picture__image {
+    height: 23vh;
+    box-shadow: 0px 1px 10px 1px rgb(99, 99, 99);
+}
+
+@media  screen and (min-width: 768px) {
+    .pictures .picture__image {
+        height: 40vh;
+    }
+}
+
+.container {
+    text-align: center;
+    color: #FF5AB3;
+}
+
+.container .container__image:first-child {
+    margin-top: 40px;
+}
+
+.container .container__image {
+    height: 20vh;
+    width: auto;
+    box-shadow: 0px 1px 10px 1px rgb(99, 99, 99);
+}
+
+@media  screen and (min-width: 768px) {
+    .container img {
+        height: 55vh;
+        margin-top: 0;
+    }
+}
+
+.container h4 {
+    font-family: 'Red Rose', cursive;
+}
+
+.container p {
+    font-size: 0.7em;
+    margin-bottom: 50px;
+    font-family: 'Red Rose', cursive;
+}
+
+/*lysere bakgrunn, så bildene popper mer*/
