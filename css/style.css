@@ -8,6 +8,7 @@ body {
 header {
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 .header {
@@ -55,13 +56,6 @@ header {
     }
 }
 
-
-
-
-.title, .about, .facts, .pictures {
-    justify-content: center;
-}
-
 .contain {
     margin: 0 auto;
     max-width: 940px;
@@ -98,6 +92,17 @@ header {
     position: absolute;
     top: 20%;
     left: 8%;
+    animation-name: transformIt;
+    animation-duration: 3s;
+}
+
+@keyframes transformIt {
+    from {
+        transform: translate(1100px);
+    }
+    to {
+        transform: translate(0px);
+    }
 }
 
 .title .title__text-one {
@@ -116,8 +121,6 @@ header {
 }
 
 .about {
-    display: flex;
-    justify-content: space-between;
     height: 50vh;
     margin-top: 30px;
 }
@@ -125,7 +128,10 @@ header {
 
 @media  screen and (min-width: 768px) {
     .about {
-        height: 70vh;
+        height: 80vh;
+        display: flex;
+        justify-content: space-between;
+        margin: 0px 80px;
     }
 }
 
@@ -134,12 +140,12 @@ header {
 }
 
 .about .about__title {
-    margin-top: 1em;
+    margin-top: 0.2em;
 }
 
 .about .about__description {
     font-size: 0.7em;
-    margin-top: 2em;
+    margin-top: 0.7em;
 }
 
 .about .about__image {
@@ -150,7 +156,7 @@ header {
 
 @media  screen and (min-width: 768px) {
     .about .about__image {
-        height: 50vh;
+        height: 55vh;
     }
 }
 
@@ -158,23 +164,29 @@ header {
     font-size: 2em;
     color: #7DED61;
     height: 70vh;
-    width: 160vw;
+    margin-right: 80px;
+    text-align: right;
 }
 
 @media  screen and (min-width: 768px) {
     .facts {
-        height: 10vh;
         color: #7DED61;
-        height: 90vh;
+        height: 80vh;
         width: fit-content;
     }
 }
 
+@media screen and (min-width: 768px) {
+    .pictures {
+        margin: 0px 100px;
+    }    
+}
+
 .pictures .picture {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 3em;
-    justify-content: space-between;
 }
 
 .pictures .picture__title {
@@ -194,7 +206,7 @@ header {
 
 @media  screen and (min-width: 768px) {
     .pictures .picture__image {
-        height: 50vh;
+        height: 40vh;
     }
 }
 
