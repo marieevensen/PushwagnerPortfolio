@@ -37,37 +37,39 @@ const pictures = [
 ]
 
 /*
-først har jeg lagd en array,
-med kilde, navn og årstall.
-lagde deretter en funksjon addPic,
-i listen pictures, for hvert bilde,
-velg i dokumentet (gallery.html) elementet med classname container,
-lager elementer,
-bruker listen til å legge inn kilde og tekst,
-gir bildene classname: container__image,
-appendchild sier hvilke som kommer under hverandre
+    Lagd array for galleri slik at man enkelt kan legge til et nytt bilde i galleriet
 */
 
 function addPic() {
     pictures.forEach(picture => {
-        const container = document.querySelector('.container')
+        const container = document.querySelector('.gallery')
 
         const img = document.createElement('img');
-        const h2 = document.createElement('h2');
-        const p = document.createElement('p');
+        const title = document.createElement('h2');
+        const year = document.createElement('p');
 
         img.src = picture.src;
         img.alt = picture.alt;
-        h2.innerText = picture.name;
-        p.innerText = picture.year;
 
-        img.className = 'container__image'
+        title.innerText = picture.name;
+        year.innerText = picture.year;
+
+        img.className = 'gallery__image'
 
         container.appendChild(img)
-        container.appendChild(h2)
-        container.appendChild(p)
-
+        container.appendChild(title)
+        container.appendChild(year)
     })
 }
 
 addPic();
+
+/*
+    1 Lager en funksjon addPic
+    2 For hvert picture i listen picture
+    3 Elementene skal bli laget under elementet med classname: container
+    4 Lager elementene som trengs og gir de en variabel
+    5 Gir elementene verdier
+    6 Appendchild for å velge hvilke elementer som er under elementet
+    7 Så kjøres funksjonen
+*/
